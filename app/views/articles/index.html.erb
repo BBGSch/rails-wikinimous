@@ -1,0 +1,6 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li><%=link_to article.title, "/articles/#{article.id}" %> | <%= article.content %>  
+      <%=link_to "delete", "/articles/#{article.id}", method: :delete %> <%=link_to "edit", "/articles/#{article.id}/edit" %> </li>
+  <% end %>
+</ul>
